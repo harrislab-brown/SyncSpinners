@@ -1,1 +1,1 @@
-
+This folder contains three .stl files for the molds used in designing the 3 spinners used in the manuscript. "MainSpinnerDesign.stl" is the shape used throughout the entire manuscript and corresponds to a value of r = 0.6 in the non-identical pairs section. "KuramotoPhaseLock.stl" corresponds to r=0.25 and "KuramotoPhaseDrift.stl" corresponds to r=0.76.
