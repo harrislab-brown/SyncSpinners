@@ -50,13 +50,10 @@ t1 = 2*pi/0.19*6; %end time
 
 speed = 0.19;
 speed2 = 0.19;
-
 omegaset = speed*ones(2,1);
 omegaset(2) = speed2;
 omegainit = omegaset;
-
 %
-
 angles = [0.0; 0.8];
 initcon = [angles omegainit]';
 

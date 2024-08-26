@@ -1,25 +1,15 @@
 figure(2)
 clump = 1;
-
 colors = viridis(5);
-yt = 1.5
+
+yt = 1.5;
 s1 = colors(2,:);
 s2 = colors(4,:);
 
 points1 = constructspinnerskel(n,1);
-
-x1 = points1(1,1);
-x2 = points1(1,9);
-
-y1 = points1(2,1);
-y2 = points1(2,9);
-
-ds = sqrt( (x2-x1).^2 + (y2-y1).^2);
-
-
-
 R_fun = @(theta) ([cos(theta) -sin(theta); sin(theta) cos(theta)]);
-for jj = 1:25:min(length(th(:,1)),1000)
+
+for jj = 1:5:min(length(th(:,1)),1000)
      R_fun = @(theta) ([cos(theta) -sin(theta); sin(theta) cos(theta)]);
      origin = [0;0];
 
@@ -54,21 +44,6 @@ for jj = 1:25:min(length(th(:,1)),1000)
     x2s = xs(npoints+1:end);
     y2s = ys(npoints+1:end);
 
-    if omegaset(1) > 0
-        %P1 = polyshape(x1s, y1s,'SolidBoundaryOrientation','cw');
-    else
-        %P1 = polyshape(x1s, y1s,'SolidBoundaryOrientation','ccw');
-    end
-
-    if omegaset(2) > 0
-        %P2 = polyshape(x2s, y2s,'SolidBoundaryOrientation','cw');
-    else
-        %P2 = polyshape(x2s, y2s,'SolidBoundaryOrientation','ccw');
-    end
-
-    %plot(P1,'FaceColor',s1,'FaceAlpha',0.5,'EdgeColor',s1)   
-    %plot(P2,'FaceColor',s2,'FaceAlpha',0.5,'EdgeColor',s2)
-
     scatter(xs2,ys2,50,'MarkerFaceColor','k','MarkerEdgeColor','k')
     hold on
 
@@ -90,8 +65,5 @@ for jj = 1:25:min(length(th(:,1)),1000)
        ylim([-yt*l,yt*l])
     end
     drawnow()
-   %frame = getframe(gcf); %get frame
-   %writeVideo(myVideo, frame);
 end
-%close(myVideo)
 
