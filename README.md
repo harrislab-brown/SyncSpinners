@@ -1,2 +1,2 @@
 # SyncSpinners
-Simulation code and data collection associated with synchronization of capillary spinners.
+Simulation code, data collection, and CAD files associated with "Synchronization of wave-propelled capillary spinners".
